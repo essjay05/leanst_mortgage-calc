@@ -1,4 +1,3 @@
-// mortgage for
 function calculateLoan() {
     // var monthlyPayment = null
     // Get values from form inputs using ids and set variables
