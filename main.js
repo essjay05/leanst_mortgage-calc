@@ -7,8 +7,6 @@ function calculateLoan() {
     let apr = (document.getElementById('apr').value) / 1200
     let months = document.getElementById('months').value;
 
-
-
     // Calculate interest owed:
     let interest = (loanAmount * apr) / months
     // Add amount of interest to total of loan amount
@@ -18,8 +16,6 @@ function calculateLoan() {
         // the nearest penny (2 decimal places)
     let monthlyPayment =((loanAmount / months) + interest).toFixed(2);
     
-    
-
     // Convert to String
     // Send/set monthlyPayment calculated to render onto screen:
     document.getElementById('monthlyPayment').innerHTML = "Monthly Mortgage Payment = $ " + monthlyPayment;
