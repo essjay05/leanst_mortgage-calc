@@ -5,18 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Lean St. Challenge: Mortgage Calculator</title>
-    <script type="text/javascript" src="JS-mortgage-calc.js"></script>
+    <script type="text/javascript" src="main.js"></script>
 </head>
 <body>
     <main>
-        <h1>Mortgage Calculator using Javascript:</h1>
-        <h3>Please fill in the form below to calculate your monthly mortgage payment:</h3>
-
-            <h5>Original Loan Amount: $<input type="number" id="loanAmount" onChange="calculateLoan()"></h5>
-            <h5>Annual Percentage Rate: %<input type="number" id="apr" min="0" max="100" onChange="calculateLoan()"></h5>
-            <h5>Number of months/payments: <input type="number" id="months" onChange="calculateLoan()"></h5>
-            <!-- <button id="calcBtn"> Calculate </button> -->
+            <h1>Mortgage Calculator using Javascript:</h1>
+            <h3>Please fill in the form below to calculate your monthly mortgage payment:</h3>
+        <form id="mortgage-form">
+            <h5>Original Loan Amount: $<input type="number" id="loanAmount"></h5>
+            <h5>Annual Percentage Rate: %<input type="number" id="apr" min="0" max="100"></h5>
+            <h5>Number of months/payments: <input type="number" id="months"></h5>
+            <button onClick="calculateLoan()" type="submit" id="calcBtn"> Calculate </button>
+        </form>
         <div>
+            <h2>Monthly Payment:</h2>
             <h2 id="monthlyPayment"></h2>
         </div>
         
